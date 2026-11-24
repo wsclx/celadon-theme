@@ -2,7 +2,7 @@
 #
 # Every card is a glazed tile with a soft bulge and a gloss edge, the gaps between cards are the grout.
 # Dark mode: bottle-green tiles on dark grout. Light mode: pale celadon tiles on warm grey grout.
-# Rings and sliders are drawn in thin gold, titles and big numbers use a Didone serif from the system.
+# Rings, sliders and gauges are drawn in gold, titles and big numbers use a Didone serif from the system.
 #
 # Works without any add-on: the glaze, bulge and gloss edge come from plain theme variables (a gradient
 # background and inset shadows on every card). With card-mod 4.x installed (optional), the card-mod-* keys

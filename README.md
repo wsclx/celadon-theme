@@ -16,7 +16,7 @@ A theme for Home Assistant that looks like a wall of glazed ceramic tiles: every
 
 - **One theme, two modes.** Dark: bottle-green tiles on dark grout. Light: pale celadon tiles on warm grey grout, with switched-on devices as dark green tiles. It follows the light or dark setting of your profile or device.
 - **Tiles without add-ons.** The glaze, the bulge and the gloss edge come from plain theme variables, so every card, badge and settings panel is a tile.
-- **Thin gold** for thermostat rings, sliders, gauges and the first graph line.
+- **Gold** for thermostat rings, sliders, gauges and the first graph line.
 - **Didone serif for big numbers** (thermostat, gauges, card headers) from the system: Bodoni 72 or Didot on Apple devices, Bodoni MT on Windows with Office, otherwise the system serif. Text uses Optima on Apple devices and Candara or Segoe UI on Windows. Nothing is downloaded.
 - **Optional extras with card-mod:** tiles of switched-on lights, switches, fans, media players, climate, covers and similar entities turn into a bright celadon tile, the sidebar entries become small tiles, and the dashboard title and section headings switch to the Didone serif.
 
