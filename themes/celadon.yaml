@@ -1,0 +1,273 @@
+# Celadon: a glazed ceramic tile theme for Home Assistant, with light and dark mode in one theme.
+#
+# Every card is a glazed tile with a soft bulge and a gloss edge, the gaps between cards are the grout.
+# Dark mode: bottle-green tiles on dark grout. Light mode: pale celadon tiles on warm grey grout.
+# Rings and sliders are drawn in thin gold, titles and big numbers use a Didone serif from the system.
+#
+# Works without any add-on: the glaze, bulge and gloss edge come from plain theme variables (a gradient
+# background and inset shadows on every card). With card-mod 4.x installed (optional), the card-mod-* keys
+# below turn tiles of switched-on devices into a bright celadon tile, give the sidebar tiled entries
+# and set the dashboard title and section headings in the Didone serif.
+# Without card-mod those keys are ignored.
+#
+# Fonts: system fonts only, nothing is downloaded. Didone titles use Bodoni 72 or Didot on Apple devices,
+# Bodoni MT on Windows with Office, and fall back to the system serif elsewhere.
+Celadon:
+  card-mod-theme: Celadon
+
+  # Theme-own variables, used by the card-mod rules below
+  celadon-lit-glaze: "radial-gradient(130% 100% at 28% 12%, rgba(255,255,255,.45), rgba(255,255,255,0) 58%), linear-gradient(165deg, #c4e5cf 0%, #a8d5b9 55%, #95c7a8 100%)"
+  celadon-lit-text: "#0c2418"
+  celadon-lit-text-2: "#2c4a39"
+  celadon-lit-edge: "inset 0 1px 0 rgba(255,255,255,.75), inset 0 -2px 3px rgba(20,60,40,.30), inset 0 0 16px rgba(20,60,40,.18), 0 2px 3px rgba(0,0,0,.45)"
+  celadon-tile-glaze: "radial-gradient(130% 100% at 28% 12%, rgba(255,255,255,.07), rgba(255,255,255,0) 58%), linear-gradient(165deg, #183c29 0%, #11301f 58%, #0d2618 100%)"
+  celadon-numbers: "'Bodoni 72', Didot, 'Bodoni MT', 'Bodoni Moda', 'Libre Bodoni', 'Noto Serif Display', ui-serif, Georgia, serif"
+
+  # Core colours: celadon for actions and selection, gold for rings and sliders
+  primary-color: "#a8d5b9"
+  accent-color: "#d4b062"
+  text-primary-color: "#0c2418"
+  primary-text-color: "#ece6d2"
+  secondary-text-color: "#b6bfae"
+  disabled-text-color: "#7d887a"
+  # Newer frontends colour buttons, switches and tabs from this scale instead of primary-color.
+  ha-color-primary-05: "#071810"
+  ha-color-primary-10: "#0c2418"
+  ha-color-primary-20: "#16402b"
+  ha-color-primary-30: "#22603f"
+  ha-color-primary-40: "#3a7d57"
+  ha-color-primary-50: "#5c9b76"
+  ha-color-primary-60: "#7fb795"
+  ha-color-primary-70: "#a8d5b9"
+  ha-color-primary-80: "#c6e6d1"
+  ha-color-primary-90: "#e0f1e6"
+  ha-color-primary-95: "#eff8f2"
+
+  # Grout behind dashboards and settings
+  primary-background-color: "#232522"
+  secondary-background-color: "#1b1d1a"
+  lovelace-background: "#232522"
+
+  # Tiles: glaze as a gradient, bulge and gloss edge as inset shadows
+  card-background-color: "#12301f"
+  ha-card-background: "var(--celadon-tile-glaze)"
+  ha-card-border-color: "#09190f"
+  ha-card-border-width: "1px"
+  ha-card-border-radius: "7px"
+  ha-card-box-shadow: "inset 0 1px 0 rgba(214,255,228,.20), inset 1px 0 0 rgba(214,255,228,.07), inset 0 -2px 3px rgba(0,0,0,.40), inset 0 0 18px rgba(0,0,0,.30), 0 2px 3px rgba(0,0,0,.50)"
+  # Grout lines between tiles inside a section
+  ha-section-grid-row-gap: "10px"
+  ha-section-grid-column-gap: "10px"
+  divider-color: "rgba(236,230,210,.14)"
+  ha-color-border-neutral-quiet: "rgba(236,230,210,.14)"
+
+  # Dialogs
+  ha-dialog-border-radius: "10px"
+  ha-dialog-surface-background: "#12301f"
+  mdc-theme-surface: "#12301f"
+  mdc-dialog-scrim-color: "rgba(0,0,0,.55)"
+  paper-dialog-background-color: "#12301f"
+
+  # Header and sidebar
+  app-header-background-color: "#12301f"
+  app-header-text-color: "#ece6d2"
+  app-header-border-bottom: "1px solid #09190f"
+  sidebar-background-color: "#1b1d1a"
+  sidebar-text-color: "#ece6d2"
+  sidebar-icon-color: "#d4b062"
+  sidebar-selected-text-color: "#ece6d2"
+  sidebar-selected-icon-color: "#a8d5b9"
+  sidebar-menu-button-text-color: "#ece6d2"
+
+  # Inputs and forms
+  input-fill-color: "#0d2618"
+  input-ink-color: "var(--primary-text-color)"
+  input-label-ink-color: "var(--secondary-text-color)"
+  input-idle-line-color: "#6f7d6e"
+  input-hover-line-color: "var(--primary-color)"
+  input-outlined-idle-border-color: "#6f7d6e"
+  input-outlined-hover-border-color: "var(--primary-color)"
+  mdc-text-field-fill-color: "#0d2618"
+  mdc-select-fill-color: "#0d2618"
+  ha-color-form-background: "#0d2618"
+  code-editor-background-color: "#0d2618"
+  markdown-code-background-color: "#0d2618"
+  switch-checked-button-color: "#d4b062"
+  switch-checked-track-color: "#d4b062"
+  switch-unchecked-button-color: "#b6bfae"
+  switch-unchecked-track-color: "#6f7d6e"
+
+  # Sliders and rings in thin gold
+  control-slider-color: "#d4b062"
+  control-slider-thickness: "36px"
+  control-circular-slider-color: "#d4b062"
+  control-circular-slider-background: "#d4b062"
+  control-circular-slider-background-opacity: ".22"
+
+  # Typography: a humanist sans for text, a Didone serif for titles
+  ha-font-family-body: "Optima, Candara, 'Segoe UI', 'Noto Sans', system-ui, sans-serif"
+  ha-font-family-heading: "var(--celadon-numbers)"
+  ha-card-header-font-family: "var(--celadon-numbers)"
+  ha-font-family-code: "ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+  code-font-family: "ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
+
+  # State colours: on is celadon, heat is gold, everything off is a quiet cream
+  state-icon-color: "#e2d3a3"
+  state-inactive-color: "#9aa596"
+  state-active-color: "#a8d5b9"
+  state-light-active-color: "#a8d5b9"
+  state-switch-active-color: "#a8d5b9"
+  state-fan-active-color: "#a8d5b9"
+  state-media_player-active-color: "#a8d5b9"
+  state-climate-heat-color: "#d4b062"
+  state-climate-cool-color: "#8cc6c8"
+  state-climate-auto-color: "#a8d5b9"
+  state-climate-off-color: "#7d887a"
+  success-color: "#8fd0a5"
+  warning-color: "#e3b45a"
+  error-color: "#f29d8e"
+  amber-color: "#d4b062"
+  orange-color: "#d99a52"
+  red-color: "#f29d8e"
+  green-color: "#8fd0a5"
+  teal-color: "#8cc6c8"
+  cyan-color: "#8cc6c8"
+  blue-color: "#8fb4d8"
+  indigo-color: "#a3a8dc"
+  purple-color: "#c4a3d4"
+  deep-purple-color: "#b8a0d8"
+  grey-color: "#9aa596"
+  # Gauges take the info colour: gold like the other rings
+  info-color: "#d4b062"
+  # History and statistics graphs: gold first, then celadon and glaze tones
+  graph-color-1: "#d4b062"
+  graph-color-2: "#a8d5b9"
+  graph-color-3: "#8cc6c8"
+  graph-color-4: "#e2d3a3"
+  graph-color-5: "#d79a8a"
+  # Weather icons in glaze colours
+  weather-icon-sun-color: "#e2c06a"
+  weather-icon-moon-color: "#ece6d2"
+  weather-icon-rain-color: "#8cc6c8"
+  weather-icon-cloud-front-color: "#dcdccf"
+  weather-icon-cloud-back-color: "#a9ae9f"
+
+  # Optional, card-mod 4.x: tiles of switchable entities that are on become a bright celadon tile.
+  # The domain list matters: the tile card marks any entity with a value as active, sensors included.
+  card-mod-card: |
+    :host(hui-heading-card) .title .heading { font-family: var(--celadon-numbers); font-size: 20px; }
+    ha-card.active:has(ha-tile-icon:is([data-domain=light], [data-domain=switch], [data-domain=fan], [data-domain=media_player], [data-domain=climate], [data-domain=input_boolean], [data-domain=humidifier], [data-domain=water_heater], [data-domain=vacuum], [data-domain=remote], [data-domain=siren], [data-domain=automation], [data-domain=script], [data-domain=cover])) {
+      --ha-card-background: var(--celadon-lit-glaze);
+      background: var(--celadon-lit-glaze);
+      box-shadow: var(--celadon-lit-edge);
+      --primary-text-color: var(--celadon-lit-text);
+      --secondary-text-color: var(--celadon-lit-text-2);
+    }
+    ha-card.active:has(ha-tile-icon:is([data-domain=light], [data-domain=switch], [data-domain=fan], [data-domain=media_player], [data-domain=climate], [data-domain=input_boolean], [data-domain=humidifier], [data-domain=water_heater], [data-domain=vacuum], [data-domain=remote], [data-domain=siren], [data-domain=automation], [data-domain=script], [data-domain=cover])) ha-tile-icon {
+      --tile-icon-color: var(--celadon-lit-text) !important;
+    }
+  # Optional, card-mod 4.x: the dashboard title in the Didone serif, like a glazed name plate
+  card-mod-root: |
+    .main-title { font-family: var(--celadon-numbers); font-size: 26px; letter-spacing: .01em; }
+  # Optional, card-mod 4.x: sidebar entries as small glazed tiles
+  card-mod-sidebar: |
+    ha-list-item-button {
+      margin: 3px 6px;
+      border-radius: 6px;
+      background: var(--celadon-tile-glaze);
+      box-shadow: var(--ha-card-box-shadow);
+    }
+    ha-list-item-button.selected {
+      background: var(--celadon-lit-glaze);
+      box-shadow: var(--celadon-lit-edge);
+      --sidebar-selected-text-color: var(--celadon-lit-text);
+      --sidebar-selected-icon-color: var(--celadon-lit-text);
+    }
+    ha-list-item-button.selected::before { opacity: 0; }
+
+  modes:
+    dark: {}
+    light:
+      celadon-tile-glaze: "radial-gradient(130% 100% at 28% 12%, rgba(255,255,255,.60), rgba(255,255,255,0) 58%), linear-gradient(165deg, #e2ede0 0%, #d2e3d3 58%, #c4d9c7 100%)"
+      celadon-lit-glaze: "radial-gradient(130% 100% at 28% 12%, rgba(255,255,255,.14), rgba(255,255,255,0) 58%), linear-gradient(165deg, #1f4d34 0%, #173f2a 58%, #113322 100%)"
+      celadon-lit-text: "#f2ecd9"
+      celadon-lit-text-2: "#dde3d4"
+      celadon-lit-edge: "inset 0 1px 0 rgba(214,255,228,.30), inset 0 -2px 3px rgba(0,0,0,.40), inset 0 0 16px rgba(0,0,0,.25), 0 2px 3px rgba(40,50,40,.35)"
+      primary-color: "#255f40"
+      accent-color: "#8a6a1e"
+      text-primary-color: "#f7f3e6"
+      primary-text-color: "#14281d"
+      secondary-text-color: "#3f5145"
+      disabled-text-color: "#7f8c81"
+      primary-background-color: "#c9c5b8"
+      secondary-background-color: "#d6d3c8"
+      lovelace-background: "#c9c5b8"
+      card-background-color: "#dbe8da"
+      ha-card-border-color: "rgba(60,75,62,.30)"
+      ha-card-box-shadow: "inset 0 1px 0 rgba(255,255,255,.95), inset 1px 0 0 rgba(255,255,255,.5), inset 0 -2px 3px rgba(40,70,50,.18), inset 0 0 18px rgba(40,70,50,.10), 0 2px 3px rgba(60,55,40,.30)"
+      divider-color: "rgba(20,40,29,.16)"
+      ha-color-border-neutral-quiet: "rgba(20,40,29,.16)"
+      ha-dialog-surface-background: "#e2ebe0"
+      mdc-theme-surface: "#e2ebe0"
+      mdc-dialog-scrim-color: "rgba(20,30,24,.40)"
+      paper-dialog-background-color: "#e2ebe0"
+      app-header-background-color: "#e2ebe0"
+      app-header-text-color: "#14281d"
+      app-header-border-bottom: "1px solid rgba(60,75,62,.30)"
+      sidebar-background-color: "#d6d3c8"
+      sidebar-text-color: "#14281d"
+      sidebar-icon-color: "#8a6a1e"
+      sidebar-selected-text-color: "#14281d"
+      sidebar-selected-icon-color: "#255f40"
+      sidebar-menu-button-text-color: "#14281d"
+      input-fill-color: "#f1f5ee"
+      input-idle-line-color: "#6b7a6e"
+      input-outlined-idle-border-color: "#6b7a6e"
+      mdc-text-field-fill-color: "#f1f5ee"
+      mdc-select-fill-color: "#f1f5ee"
+      ha-color-form-background: "#f1f5ee"
+      code-editor-background-color: "#f1f5ee"
+      markdown-code-background-color: "#f1f5ee"
+      switch-checked-button-color: "#8a6a1e"
+      switch-checked-track-color: "#8a6a1e"
+      switch-unchecked-button-color: "#3f5145"
+      switch-unchecked-track-color: "#9aa69c"
+      control-slider-color: "#8a6a1e"
+      control-circular-slider-color: "#8a6a1e"
+      control-circular-slider-background: "#8a6a1e"
+      state-icon-color: "#6f561a"
+      state-inactive-color: "#5f6f63"
+      state-active-color: "#255f40"
+      state-light-active-color: "#255f40"
+      state-switch-active-color: "#255f40"
+      state-fan-active-color: "#255f40"
+      state-media_player-active-color: "#255f40"
+      state-climate-heat-color: "#8a6a1e"
+      state-climate-cool-color: "#2e6e73"
+      state-climate-auto-color: "#255f40"
+      state-climate-off-color: "#7f8c81"
+      success-color: "#255f40"
+      warning-color: "#8a5a10"
+      error-color: "#9a2c25"
+      amber-color: "#8a6a1e"
+      orange-color: "#9a5418"
+      red-color: "#9a2c25"
+      green-color: "#255f40"
+      teal-color: "#2e6e73"
+      cyan-color: "#2e6e73"
+      blue-color: "#2f5f8f"
+      indigo-color: "#4a4f9a"
+      purple-color: "#7a4a8f"
+      deep-purple-color: "#6a4a9a"
+      grey-color: "#5f6f63"
+      info-color: "#8a6a1e"
+      graph-color-1: "#8a6a1e"
+      graph-color-2: "#255f40"
+      graph-color-3: "#2e6e73"
+      graph-color-4: "#6f561a"
+      graph-color-5: "#9a4a3a"
+      weather-icon-sun-color: "#c79a2e"
+      weather-icon-moon-color: "#8a6a1e"
+      weather-icon-rain-color: "#2e6e73"
+      weather-icon-cloud-front-color: "#f4f6f0"
+      weather-icon-cloud-back-color: "#9aa69c"
