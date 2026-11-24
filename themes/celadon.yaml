@@ -97,7 +97,7 @@ Celadon:
   switch-unchecked-button-color: "#b6bfae"
   switch-unchecked-track-color: "#6f7d6e"
 
-  # Sliders and rings in thin gold
+  # Sliders and rings in gold
   control-slider-color: "#d4b062"
   control-slider-thickness: "36px"
   control-circular-slider-color: "#d4b062"
