@@ -3,7 +3,7 @@
 All notable changes to this theme are documented here.
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versions follow [Semantic Versioning](https://semver.org/).
 
-## [Unreleased]
+## [1.1.2] - 2026-11-25
 
 ### Fixed
 - card-mod: keyboard focus on tiles is a 2 px ring in the focus colour (gold in dark mode, dark celadon in light mode), set 2 px off the tile in the grout. Before, a lit tile hid the frontend's thin focus ring completely, and on other tiles it was 1 px in the state colour.
