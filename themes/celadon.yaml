@@ -236,13 +236,13 @@ Celadon:
       --state-humidifier-on-color: var(--celadon-lit-control);
     }
     /* Keyboard focus: the tile draws a 1 px ring in the state colour, and the lit tile's own shadow would hide it.
-       A 2 px ring in the focus colour sits in the grout around every tile instead. */
+       A 2 px ring in the focus colour, 2 px away from the tile, sits in the grout around every tile instead. */
     ha-card:has(ha-tile-container[focused]) {
       border-color: var(--ha-color-focus) !important;
-      box-shadow: var(--ha-card-box-shadow), 0 0 0 2px var(--ha-color-focus) !important;
+      box-shadow: var(--ha-card-box-shadow), 0 0 0 2px var(--primary-background-color), 0 0 0 4px var(--ha-color-focus) !important;
     }
     ha-card.active:has(ha-tile-icon:not([data-domain=sensor], [data-domain=binary_sensor]):is([data-state=on], [data-state=open], [data-state=opening], [data-state=closing], [data-state=playing], [data-state=heat], [data-state=cool], [data-state=heat_cool], [data-state=auto], [data-state=dry], [data-state=fan_only], [data-state=cleaning], [data-state=returning], [data-state=mowing]), ha-tile-icon[data-domain=water_heater]:not([data-state=off])):has(ha-tile-container[focused]) {
-      box-shadow: var(--celadon-lit-edge), 0 0 0 2px var(--ha-color-focus) !important;
+      box-shadow: var(--celadon-lit-edge), 0 0 0 2px var(--primary-background-color), 0 0 0 4px var(--ha-color-focus) !important;
     }
     /* Same selector as the rule above (keep in sync): inline icon and slider colours need !important */
     ha-card.active:has(ha-tile-icon:not([data-domain=sensor], [data-domain=binary_sensor]):is([data-state=on], [data-state=open], [data-state=opening], [data-state=closing], [data-state=playing], [data-state=heat], [data-state=cool], [data-state=heat_cool], [data-state=auto], [data-state=dry], [data-state=fan_only], [data-state=cleaning], [data-state=returning], [data-state=mowing]), ha-tile-icon[data-domain=water_heater]:not([data-state=off])) :is(ha-tile-icon, hui-card-features) {
