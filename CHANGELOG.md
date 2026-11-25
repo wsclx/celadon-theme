@@ -9,7 +9,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), ver
 
 ### Fixed
 - Light mode: text of plain buttons and active tabs was too faint (3.6:1). It now uses the dark celadon (5.5:1).
-- Switches in current frontends ignored the old switch colours; they are gold now, like sliders and rings.
+- Switches in current frontends ignored the old switch colours; they are gold now, like the sliders.
 - The keyboard focus ring is gold in dark mode and dark celadon in light mode instead of the default grey.
 - Light mode: the heating arc of the thermostat uses a darker gold, so the half-transparent arc stays visible on pale glaze.
 - Error, red and blue are hex values again, so tinted error surfaces and badges get the glaze colours too.
