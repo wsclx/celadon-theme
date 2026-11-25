@@ -118,15 +118,13 @@ Celadon:
   ha-switch-checked-thumb-background-color: "#0c2418"
   ha-switch-checked-thumb-border-color: "transparent"
   ha-switch-border-color: "#6f7d6e"
+  ha-switch-background-color: "#0d2618"
   # Keyboard focus ring in gold, the colour of lines in this theme
   ha-color-focus: "#d4b062"
 
-  # Sliders and rings in gold
+  # Sliders in gold (thermostat rings take the climate state colours below)
   control-slider-color: "#d4b062"
   control-slider-thickness: "36px"
-  control-circular-slider-color: "#d4b062"
-  control-circular-slider-background: "#d4b062"
-  control-circular-slider-background-opacity: ".22"
 
   # Typography: a humanist sans for text, a Didone serif for titles
   ha-font-family-body: "Optima, Candara, 'Segoe UI', 'Noto Sans', system-ui, sans-serif"
@@ -317,10 +315,9 @@ Celadon:
       ha-switch-checked-border-color: "#8a6a1e"
       ha-switch-checked-thumb-background-color: "#f7f3e6"
       ha-switch-border-color: "#6b7a6e"
+      ha-switch-background-color: "#f1f5ee"
       ha-color-focus: "#255f40"
       control-slider-color: "#8a6a1e"
-      control-circular-slider-color: "#8a6a1e"
-      control-circular-slider-background: "#8a6a1e"
       celadon-glaze: "#255f40"
       gold-glaze: "#7a5c14"
       cobalt-glaze: "#2c4f8c"

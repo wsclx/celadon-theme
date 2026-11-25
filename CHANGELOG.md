@@ -14,6 +14,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), ver
 - card-mod: the sidebar uses the text font of the cards, its title the Didone serif. A water heater lights its tile in any mode except off.
 
 ### Changed
+- Removed the thermostat ring variables: the frontend sets them on the ring itself, so they never took effect. The rings keep the heating and cooling colours.
+- Screenshots: light mode without card-mod and settings in light mode added; the entities card now shows a switch.
 - The serif stack tries Noto Serif Display earlier. README: what changes on Android and Linux, and which parts of the mock a theme cannot reach.
 
 ## [1.1.0] - 2026-11-25

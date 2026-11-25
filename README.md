@@ -23,9 +23,13 @@ A theme for Home Assistant that looks like a wall of glazed ceramic tiles: every
 
 Without card-mod the theme still works: the tiles keep their glaze and gloss, switched-on devices show a celadon icon instead of a lit tile, the sidebar stays flat, and headings use the text font.
 
-![Without card-mod: glazed tiles, switched-on devices only show a celadon icon](https://raw.githubusercontent.com/wsclx/celadon-theme/main/images/dashboard-dark-desktop-no-cardmod.png)
+| Without card-mod, dark | Without card-mod, light |
+|---|---|
+| ![Without card-mod in dark mode: glazed tiles, switched-on devices only show a celadon icon](https://raw.githubusercontent.com/wsclx/celadon-theme/main/images/dashboard-dark-desktop-no-cardmod.png) | ![Without card-mod in light mode](https://raw.githubusercontent.com/wsclx/celadon-theme/main/images/dashboard-light-desktop-no-cardmod.png) |
 
-![Settings in dark mode](https://raw.githubusercontent.com/wsclx/celadon-theme/main/images/settings-dark-desktop.png)
+| Settings, dark | Settings, light |
+|---|---|
+| ![Settings in dark mode](https://raw.githubusercontent.com/wsclx/celadon-theme/main/images/settings-dark-desktop.png) | ![Settings in light mode](https://raw.githubusercontent.com/wsclx/celadon-theme/main/images/settings-light-desktop.png) |
 
 ## Requirements
 
