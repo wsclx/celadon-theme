@@ -5,6 +5,8 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), ver
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-11-25
+
 ### Fixed
 - Light mode: text of plain buttons and active tabs was too faint (3.6:1). It now uses the dark celadon (5.5:1).
 - Switches in current frontends ignored the old switch colours; they are gold now, like sliders and rings.
