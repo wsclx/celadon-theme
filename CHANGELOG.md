@@ -5,6 +5,17 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), ver
 
 ## [Unreleased]
 
+### Fixed
+- Light mode: text of plain buttons and active tabs was too faint (3.6:1). It now uses the dark celadon (5.5:1).
+- Switches in current frontends ignored the old switch colours; they are gold now, like sliders and rings.
+- The keyboard focus ring is gold in dark mode and dark celadon in light mode instead of the default grey.
+- Light mode: the heating arc of the thermostat uses a darker gold, so the half-transparent arc stays visible on pale glaze.
+- Error, red and blue are hex values again, so tinted error surfaces and badges get the glaze colours too.
+- card-mod: the sidebar uses the text font of the cards, its title the Didone serif. A water heater lights its tile in any mode except off.
+
+### Changed
+- The serif stack tries Noto Serif Display earlier. README: what changes on Android and Linux, and which parts of the mock a theme cannot reach.
+
 ## [1.1.0] - 2026-11-25
 
 ### Changed

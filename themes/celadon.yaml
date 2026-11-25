@@ -22,7 +22,7 @@ Celadon:
   celadon-lit-control: "#2f6e4b"
   celadon-lit-edge: "inset 0 1px 0 rgba(255,255,255,.75), inset 0 -2px 3px rgba(20,60,40,.30), inset 0 0 16px rgba(20,60,40,.18), 0 2px 3px rgba(0,0,0,.45)"
   celadon-tile-glaze: "radial-gradient(130% 100% at 28% 12%, rgba(255,255,255,.07), rgba(255,255,255,0) 58%), linear-gradient(165deg, #183c29 0%, #11301f 58%, #0d2618 100%)"
-  celadon-numbers: "'Bodoni 72', Didot, 'Bodoni MT', 'Bodoni Moda', 'Libre Bodoni', 'Noto Serif Display', ui-serif, Georgia, serif"
+  celadon-numbers: "'Bodoni 72', Didot, 'Bodoni MT', 'Noto Serif Display', 'Bodoni Moda', 'Libre Bodoni', ui-serif, Georgia, serif"
 
   # Core colours: celadon for actions and selection, gold for rings and sliders
   primary-color: "#a8d5b9"
@@ -111,6 +111,15 @@ Celadon:
   switch-checked-track-color: "#d4b062"
   switch-unchecked-button-color: "#b6bfae"
   switch-unchecked-track-color: "#6f7d6e"
+  # Switches of current frontends read these instead of the switch-* names above
+  ha-switch-checked-background-color: "#d4b062"
+  ha-switch-checked-background-color-hover: "#dcbc74"
+  ha-switch-checked-border-color: "#d4b062"
+  ha-switch-checked-thumb-background-color: "#0c2418"
+  ha-switch-checked-thumb-border-color: "transparent"
+  ha-switch-border-color: "#6f7d6e"
+  # Keyboard focus ring in gold, the colour of lines in this theme
+  ha-color-focus: "#d4b062"
 
   # Sliders and rings in gold
   control-slider-color: "#d4b062"
@@ -176,14 +185,15 @@ Celadon:
   state-climate-off-color: "#7d887a"
   success-color: "#8fd0a5"
   warning-color: "#e3b45a"
-  error-color: "var(--oxblood-glaze)"
+  # Hex, not var(): the frontend derives the rgb-* partners for tinted surfaces only from hex values
+  error-color: "#efa494"
   amber-color: "#d4b062"
   orange-color: "#d99a52"
-  red-color: "var(--oxblood-glaze)"
+  red-color: "#efa494"
   green-color: "#8fd0a5"
   teal-color: "#8cc6c8"
   cyan-color: "#8cc6c8"
-  blue-color: "var(--cobalt-glaze)"
+  blue-color: "#95b1e3"
   indigo-color: "#a3a8dc"
   purple-color: "#c4a3d4"
   deep-purple-color: "#b8a0d8"
@@ -209,7 +219,7 @@ Celadon:
   # controls a deeper pooled glaze, so a slider stays visible on the celadon.
   card-mod-card: |
     :host(hui-heading-card) .title .heading { font-family: var(--celadon-numbers); font-size: 20px; }
-    ha-card.active:has(ha-tile-icon:not([data-domain=sensor], [data-domain=binary_sensor]):is([data-state=on], [data-state=open], [data-state=opening], [data-state=closing], [data-state=playing], [data-state=heat], [data-state=cool], [data-state=heat_cool], [data-state=auto], [data-state=dry], [data-state=fan_only], [data-state=cleaning], [data-state=returning], [data-state=mowing])) {
+    ha-card.active:has(ha-tile-icon:not([data-domain=sensor], [data-domain=binary_sensor]):is([data-state=on], [data-state=open], [data-state=opening], [data-state=closing], [data-state=playing], [data-state=heat], [data-state=cool], [data-state=heat_cool], [data-state=auto], [data-state=dry], [data-state=fan_only], [data-state=cleaning], [data-state=returning], [data-state=mowing]), ha-tile-icon[data-domain=water_heater]:not([data-state=off])) {
       --ha-card-background: var(--celadon-lit-glaze);
       background: var(--celadon-lit-glaze);
       box-shadow: var(--celadon-lit-edge);
@@ -227,7 +237,8 @@ Celadon:
       --state-vacuum-active-color: var(--celadon-lit-control);
       --state-humidifier-on-color: var(--celadon-lit-control);
     }
-    ha-card.active:has(ha-tile-icon:not([data-domain=sensor], [data-domain=binary_sensor]):is([data-state=on], [data-state=open], [data-state=opening], [data-state=closing], [data-state=playing], [data-state=heat], [data-state=cool], [data-state=heat_cool], [data-state=auto], [data-state=dry], [data-state=fan_only], [data-state=cleaning], [data-state=returning], [data-state=mowing])) :is(ha-tile-icon, hui-card-features) {
+    /* Same selector as the rule above (keep in sync): inline icon and slider colours need !important */
+    ha-card.active:has(ha-tile-icon:not([data-domain=sensor], [data-domain=binary_sensor]):is([data-state=on], [data-state=open], [data-state=opening], [data-state=closing], [data-state=playing], [data-state=heat], [data-state=cool], [data-state=heat_cool], [data-state=auto], [data-state=dry], [data-state=fan_only], [data-state=cleaning], [data-state=returning], [data-state=mowing]), ha-tile-icon[data-domain=water_heater]:not([data-state=off])) :is(ha-tile-icon, hui-card-features) {
       --tile-icon-color: var(--celadon-lit-text) !important;
       --feature-color: var(--celadon-lit-control) !important;
     }
@@ -236,6 +247,8 @@ Celadon:
     .main-title { font-family: var(--celadon-numbers); font-size: 26px; letter-spacing: .01em; }
   # Optional, card-mod 4.x: sidebar entries as small glazed tiles
   card-mod-sidebar: |
+    :host { font-family: var(--ha-font-family-body); }
+    .title { font-family: var(--celadon-numbers); font-size: 22px; }
     ha-list-item-button {
       margin: 3px 6px;
       border-radius: 6px;
@@ -259,6 +272,8 @@ Celadon:
       celadon-lit-control: "#a8d5b9"
       celadon-lit-edge: "inset 0 1px 0 rgba(214,255,228,.30), inset 0 -2px 3px rgba(0,0,0,.40), inset 0 0 16px rgba(0,0,0,.25), 0 2px 3px rgba(40,50,40,.35)"
       primary-color: "#255f40"
+      # Plain buttons and active tabs read primary-40; the dark-mode value is too light on pale glaze
+      ha-color-primary-40: "#255f40"
       accent-color: "#8a6a1e"
       text-primary-color: "#f7f3e6"
       primary-text-color: "#14281d"
@@ -297,6 +312,12 @@ Celadon:
       switch-checked-track-color: "#8a6a1e"
       switch-unchecked-button-color: "#3f5145"
       switch-unchecked-track-color: "#9aa69c"
+      ha-switch-checked-background-color: "#8a6a1e"
+      ha-switch-checked-background-color-hover: "#7a5c14"
+      ha-switch-checked-border-color: "#8a6a1e"
+      ha-switch-checked-thumb-background-color: "#f7f3e6"
+      ha-switch-border-color: "#6b7a6e"
+      ha-color-focus: "#255f40"
       control-slider-color: "#8a6a1e"
       control-circular-slider-color: "#8a6a1e"
       control-circular-slider-background: "#8a6a1e"
@@ -305,20 +326,22 @@ Celadon:
       cobalt-glaze: "#2c4f8c"
       oxblood-glaze: "#8f2a22"
       state-icon-color: "#6f561a"
+      # The frontend draws thermostat arcs half transparent: a darker gold keeps them readable on pale glaze
+      state-climate-heat-color: "#6f561a"
       state-inactive-color: "#5f6f63"
       state-climate-off-color: "#7f8c81"
       state-climate-dry-color: "#2e6e73"
       state-climate-fan_only-color: "#2e6e73"
       success-color: "#255f40"
       warning-color: "#8a5a10"
-      error-color: "var(--oxblood-glaze)"
+      error-color: "#8f2a22"
       amber-color: "#8a6a1e"
       orange-color: "#9a5418"
-      red-color: "var(--oxblood-glaze)"
+      red-color: "#8f2a22"
       green-color: "#255f40"
       teal-color: "#2e6e73"
       cyan-color: "#2e6e73"
-      blue-color: "var(--cobalt-glaze)"
+      blue-color: "#2c4f8c"
       indigo-color: "#4a4f9a"
       purple-color: "#7a4a8f"
       deep-purple-color: "#6a4a9a"
