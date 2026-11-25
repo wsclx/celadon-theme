@@ -5,12 +5,15 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), ver
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-25
+
 ### Changed
 - Narrower grout: one 6 px joint between tiles in a section (was 10 px), and small ceramic corners for buttons, sliders, dialogs and badges.
 - Icons sit on small square inlays instead of circles; tile controls (brightness, position) get square corners too.
 - State colours as four glazes: celadon for running or secure, gold for warmth and attention, cobalt for cooling, oxblood for open or alarm. Covers, locks, alarms, vacuums, valves and people now follow them instead of the default colours.
 - card-mod: a tile lights up by its state (on, open, playing, heating, cleaning ...) instead of by a list of device kinds. A paused player or a closed cover stays dark. Sliders on a lit tile use a deeper glaze, so they stay visible (before: the light's own colour or the same celadon as the tile).
 - card-mod: the selected sidebar entry keeps the normal selection overlay.
+- Screenshots show tile controls (brightness, position) and the new colours.
 
 ## [1.0.0] - 2026-11-24
 
