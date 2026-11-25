@@ -15,10 +15,11 @@ A theme for Home Assistant that looks like a wall of glazed ceramic tiles: every
 ## What you get
 
 - **One theme, two modes.** Dark: bottle-green tiles on dark grout. Light: pale celadon tiles on warm grey grout, with switched-on devices as dark green tiles. It follows the light or dark setting of your profile or device.
-- **Tiles without add-ons.** The glaze, the bulge and the gloss edge come from plain theme variables, so every card, badge and settings panel is a tile.
+- **Tiles without add-ons.** The glaze, the bulge and the gloss edge come from plain theme variables, so every card, badge and settings panel is a tile. One narrow joint separates the tiles, corners stay small, and icons sit on small square inlays.
+- **States as glazes.** Celadon means running or secure, gold means warmth or attention, cobalt means cooling, oxblood means open or alarm (an unlocked door, a triggered siren).
 - **Gold** for thermostat rings, sliders, gauges and the first graph line.
 - **Didone serif for big numbers** (thermostat, gauges, card headers) from the system: Bodoni 72 or Didot on Apple devices, Bodoni MT on Windows with Office, otherwise the system serif. Text uses Optima on Apple devices and Candara or Segoe UI on Windows. Nothing is downloaded.
-- **Optional extras with card-mod:** tiles of switched-on lights, switches, fans, media players, climate, covers and similar entities turn into a bright celadon tile, the sidebar entries become small tiles, and the dashboard title and section headings switch to the Didone serif.
+- **Optional extras with card-mod:** tiles of devices that are running (a light on, a cover open, a player playing) turn into a bright celadon tile, the sidebar entries become small tiles, and the dashboard title and section headings switch to the Didone serif.
 
 Without card-mod the theme still works: the tiles keep their glaze and gloss, switched-on devices show a celadon icon instead of a lit tile, the sidebar stays flat, and headings use the text font.
 
@@ -68,7 +69,7 @@ frontend:
 
 Adjust the path to where card-mod is installed on your system.
 
-The lit tile applies to tile cards of these domains when they are on: `light`, `switch`, `fan`, `media_player`, `climate`, `input_boolean`, `humidifier`, `water_heater`, `vacuum`, `remote`, `siren`, `automation`, `script`, `cover`. Sensors are left out on purpose: the tile card marks every entity with a value as active. On a lit tile the icon takes the tile's text colour, so a light's own colour is not shown there.
+A tile lights up while its device is running: states `on`, `open`, `opening`, `closing`, `playing`, `heat`, `cool`, `heat_cool`, `auto`, `dry`, `fan_only`, `cleaning`, `returning` and `mowing`. The rule looks at the state, not at the kind of device, so a paused player or a closed cover stays dark. Sensors and binary sensors never light up: the tile card marks every entity with a value as active. On a lit tile the icon takes the tile's text colour and tile controls (brightness, position) a deeper glaze, so a light's own colour is not shown there.
 
 ## Customise
 
@@ -80,7 +81,8 @@ Change the variables below in a copy of the theme, or override them with card-mo
 | `ha-card-box-shadow` | Bulge and gloss edge, as inset shadows |
 | `lovelace-background` | Grout colour behind the tiles |
 | `ha-section-grid-row-gap`, `ha-section-grid-column-gap` | Width of the grout between tiles in a section |
-| `celadon-lit-glaze`, `celadon-lit-text` | Glaze and text colour of lit tiles (card-mod) |
+| `celadon-glaze`, `gold-glaze`, `cobalt-glaze`, `oxblood-glaze` | The four state glazes (separate values for light and dark) |
+| `celadon-lit-glaze`, `celadon-lit-text`, `celadon-lit-control` | Glaze, text colour and slider colour of lit tiles (card-mod) |
 | `celadon-numbers` | Font stack for titles and big numbers |
 | `control-slider-color`, `control-circular-slider-color`, `info-color` | Gold of sliders, thermostat rings and gauges |
 

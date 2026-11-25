@@ -19,6 +19,7 @@ Celadon:
   celadon-lit-glaze: "radial-gradient(130% 100% at 28% 12%, rgba(255,255,255,.45), rgba(255,255,255,0) 58%), linear-gradient(165deg, #c4e5cf 0%, #a8d5b9 55%, #95c7a8 100%)"
   celadon-lit-text: "#0c2418"
   celadon-lit-text-2: "#2c4a39"
+  celadon-lit-control: "#2f6e4b"
   celadon-lit-edge: "inset 0 1px 0 rgba(255,255,255,.75), inset 0 -2px 3px rgba(20,60,40,.30), inset 0 0 16px rgba(20,60,40,.18), 0 2px 3px rgba(0,0,0,.45)"
   celadon-tile-glaze: "radial-gradient(130% 100% at 28% 12%, rgba(255,255,255,.07), rgba(255,255,255,0) 58%), linear-gradient(165deg, #183c29 0%, #11301f 58%, #0d2618 100%)"
   celadon-numbers: "'Bodoni 72', Didot, 'Bodoni MT', 'Bodoni Moda', 'Libre Bodoni', 'Noto Serif Display', ui-serif, Georgia, serif"
@@ -55,9 +56,23 @@ Celadon:
   ha-card-border-width: "1px"
   ha-card-border-radius: "7px"
   ha-card-box-shadow: "inset 0 1px 0 rgba(214,255,228,.20), inset 1px 0 0 rgba(214,255,228,.07), inset 0 -2px 3px rgba(0,0,0,.40), inset 0 0 18px rgba(0,0,0,.30), 0 2px 3px rgba(0,0,0,.50)"
-  # Grout lines between tiles inside a section
-  ha-section-grid-row-gap: "10px"
-  ha-section-grid-column-gap: "10px"
+  # Grout: one narrow joint between all tiles in a section, like a tiled wall
+  ha-section-grid-row-gap: "6px"
+  ha-section-grid-column-gap: "6px"
+  # Ceramic edges: small radii everywhere instead of the soft default scale
+  ha-border-radius-sm: "2px"
+  ha-border-radius-md: "4px"
+  ha-border-radius-lg: "7px"
+  ha-border-radius-xl: "8px"
+  ha-border-radius-2xl: "10px"
+  ha-border-radius-3xl: "10px"
+  ha-border-radius-4xl: "10px"
+  ha-border-radius-5xl: "10px"
+  ha-border-radius-6xl: "10px"
+  # Icons sit on small square inlays, badges and tile controls are tiles too
+  ha-tile-icon-border-radius: "5px"
+  ha-badge-border-radius: "7px"
+  ha-card-features-border-radius: "4px"
   divider-color: "rgba(236,230,210,.14)"
   ha-color-border-neutral-quiet: "rgba(236,230,210,.14)"
 
@@ -111,28 +126,64 @@ Celadon:
   ha-font-family-code: "ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
   code-font-family: "ui-monospace, 'SF Mono', Menlo, Consolas, monospace"
 
-  # State colours: on is celadon, heat is gold, everything off is a quiet cream
+  # State colours as historical glazes: celadon = running or secure, gold = warmth and attention,
+  # cobalt = cooling, oxblood = open or alarm. Everything off is a quiet cream.
+  celadon-glaze: "#a8d5b9"
+  gold-glaze: "#d4b062"
+  cobalt-glaze: "#95b1e3"
+  oxblood-glaze: "#efa494"
   state-icon-color: "#e2d3a3"
   state-inactive-color: "#9aa596"
-  state-active-color: "#a8d5b9"
-  state-light-active-color: "#a8d5b9"
-  state-switch-active-color: "#a8d5b9"
-  state-fan-active-color: "#a8d5b9"
-  state-media_player-active-color: "#a8d5b9"
-  state-climate-heat-color: "#d4b062"
-  state-climate-cool-color: "#8cc6c8"
-  state-climate-auto-color: "#a8d5b9"
+  state-active-color: "var(--celadon-glaze)"
+  state-light-active-color: "var(--celadon-glaze)"
+  state-switch-active-color: "var(--celadon-glaze)"
+  state-fan-active-color: "var(--celadon-glaze)"
+  state-media_player-active-color: "var(--celadon-glaze)"
+  state-cover-active-color: "var(--celadon-glaze)"
+  state-valve-active-color: "var(--celadon-glaze)"
+  state-vacuum-active-color: "var(--celadon-glaze)"
+  state-humidifier-on-color: "var(--celadon-glaze)"
+  state-lawn_mower-active-color: "var(--celadon-glaze)"
+  state-person-home-color: "var(--celadon-glaze)"
+  state-device_tracker-home-color: "var(--celadon-glaze)"
+  state-lock-locked-color: "var(--celadon-glaze)"
+  state-lock-locking-color: "var(--gold-glaze)"
+  state-lock-unlocking-color: "var(--gold-glaze)"
+  state-lock-opening-color: "var(--gold-glaze)"
+  state-lock-unlocked-color: "var(--oxblood-glaze)"
+  state-lock-open-color: "var(--oxblood-glaze)"
+  state-lock-jammed-color: "var(--oxblood-glaze)"
+  state-binary_sensor-active-color: "var(--gold-glaze)"
+  state-update-active-color: "var(--gold-glaze)"
+  state-siren-active-color: "var(--oxblood-glaze)"
+  state-vacuum-error-color: "var(--oxblood-glaze)"
+  state-lawn_mower-error-color: "var(--oxblood-glaze)"
+  state-alarm_control_panel-arming-color: "var(--gold-glaze)"
+  state-alarm_control_panel-pending-color: "var(--gold-glaze)"
+  state-alarm_control_panel-disarming-color: "var(--gold-glaze)"
+  state-alarm_control_panel-triggered-color: "var(--oxblood-glaze)"
+  state-alarm_control_panel-armed_away-color: "var(--celadon-glaze)"
+  state-alarm_control_panel-armed_home-color: "var(--celadon-glaze)"
+  state-alarm_control_panel-armed_night-color: "var(--celadon-glaze)"
+  state-alarm_control_panel-armed_vacation-color: "var(--celadon-glaze)"
+  state-alarm_control_panel-armed_custom_bypass-color: "var(--celadon-glaze)"
+  state-climate-heat-color: "var(--gold-glaze)"
+  state-climate-cool-color: "var(--cobalt-glaze)"
+  state-climate-heat-cool-color: "var(--celadon-glaze)"
+  state-climate-auto-color: "var(--celadon-glaze)"
+  state-climate-dry-color: "#8cc6c8"
+  state-climate-fan_only-color: "#8cc6c8"
   state-climate-off-color: "#7d887a"
   success-color: "#8fd0a5"
   warning-color: "#e3b45a"
-  error-color: "#f29d8e"
+  error-color: "var(--oxblood-glaze)"
   amber-color: "#d4b062"
   orange-color: "#d99a52"
-  red-color: "#f29d8e"
+  red-color: "var(--oxblood-glaze)"
   green-color: "#8fd0a5"
   teal-color: "#8cc6c8"
   cyan-color: "#8cc6c8"
-  blue-color: "#8fb4d8"
+  blue-color: "var(--cobalt-glaze)"
   indigo-color: "#a3a8dc"
   purple-color: "#c4a3d4"
   deep-purple-color: "#b8a0d8"
@@ -152,19 +203,33 @@ Celadon:
   weather-icon-cloud-front-color: "#dcdccf"
   weather-icon-cloud-back-color: "#a9ae9f"
 
-  # Optional, card-mod 4.x: tiles of switchable entities that are on become a bright celadon tile.
-  # The domain list matters: the tile card marks any entity with a value as active, sensors included.
+  # Optional, card-mod 4.x: a tile turns into celadon glaze while its device is running (on, open, playing,
+  # heating, cleaning ...), decided by the state, not by the kind of device. Sensors and binary sensors stay
+  # dark, a paused player or a closed cover too. On the lit tile the icon takes the tile's text colour and tile
+  # controls a deeper pooled glaze, so a slider stays visible on the celadon.
   card-mod-card: |
     :host(hui-heading-card) .title .heading { font-family: var(--celadon-numbers); font-size: 20px; }
-    ha-card.active:has(ha-tile-icon:is([data-domain=light], [data-domain=switch], [data-domain=fan], [data-domain=media_player], [data-domain=climate], [data-domain=input_boolean], [data-domain=humidifier], [data-domain=water_heater], [data-domain=vacuum], [data-domain=remote], [data-domain=siren], [data-domain=automation], [data-domain=script], [data-domain=cover])) {
+    ha-card.active:has(ha-tile-icon:not([data-domain=sensor], [data-domain=binary_sensor]):is([data-state=on], [data-state=open], [data-state=opening], [data-state=closing], [data-state=playing], [data-state=heat], [data-state=cool], [data-state=heat_cool], [data-state=auto], [data-state=dry], [data-state=fan_only], [data-state=cleaning], [data-state=returning], [data-state=mowing])) {
       --ha-card-background: var(--celadon-lit-glaze);
       background: var(--celadon-lit-glaze);
       box-shadow: var(--celadon-lit-edge);
       --primary-text-color: var(--celadon-lit-text);
       --secondary-text-color: var(--celadon-lit-text-2);
+      --tile-icon-color: var(--celadon-lit-text);
+      --feature-color: var(--celadon-lit-control);
+      --state-active-color: var(--celadon-lit-control);
+      --state-light-active-color: var(--celadon-lit-control);
+      --state-switch-active-color: var(--celadon-lit-control);
+      --state-fan-active-color: var(--celadon-lit-control);
+      --state-media_player-active-color: var(--celadon-lit-control);
+      --state-cover-active-color: var(--celadon-lit-control);
+      --state-valve-active-color: var(--celadon-lit-control);
+      --state-vacuum-active-color: var(--celadon-lit-control);
+      --state-humidifier-on-color: var(--celadon-lit-control);
     }
-    ha-card.active:has(ha-tile-icon:is([data-domain=light], [data-domain=switch], [data-domain=fan], [data-domain=media_player], [data-domain=climate], [data-domain=input_boolean], [data-domain=humidifier], [data-domain=water_heater], [data-domain=vacuum], [data-domain=remote], [data-domain=siren], [data-domain=automation], [data-domain=script], [data-domain=cover])) ha-tile-icon {
+    ha-card.active:has(ha-tile-icon:not([data-domain=sensor], [data-domain=binary_sensor]):is([data-state=on], [data-state=open], [data-state=opening], [data-state=closing], [data-state=playing], [data-state=heat], [data-state=cool], [data-state=heat_cool], [data-state=auto], [data-state=dry], [data-state=fan_only], [data-state=cleaning], [data-state=returning], [data-state=mowing])) :is(ha-tile-icon, hui-card-features) {
       --tile-icon-color: var(--celadon-lit-text) !important;
+      --feature-color: var(--celadon-lit-control) !important;
     }
   # Optional, card-mod 4.x: the dashboard title in the Didone serif, like a glazed name plate
   card-mod-root: |
@@ -183,7 +248,6 @@ Celadon:
       --sidebar-selected-text-color: var(--celadon-lit-text);
       --sidebar-selected-icon-color: var(--celadon-lit-text);
     }
-    ha-list-item-button.selected::before { opacity: 0; }
 
   modes:
     dark: {}
@@ -192,6 +256,7 @@ Celadon:
       celadon-lit-glaze: "radial-gradient(130% 100% at 28% 12%, rgba(255,255,255,.14), rgba(255,255,255,0) 58%), linear-gradient(165deg, #1f4d34 0%, #173f2a 58%, #113322 100%)"
       celadon-lit-text: "#f2ecd9"
       celadon-lit-text-2: "#dde3d4"
+      celadon-lit-control: "#a8d5b9"
       celadon-lit-edge: "inset 0 1px 0 rgba(214,255,228,.30), inset 0 -2px 3px rgba(0,0,0,.40), inset 0 0 16px rgba(0,0,0,.25), 0 2px 3px rgba(40,50,40,.35)"
       primary-color: "#255f40"
       accent-color: "#8a6a1e"
@@ -235,27 +300,25 @@ Celadon:
       control-slider-color: "#8a6a1e"
       control-circular-slider-color: "#8a6a1e"
       control-circular-slider-background: "#8a6a1e"
+      celadon-glaze: "#255f40"
+      gold-glaze: "#7a5c14"
+      cobalt-glaze: "#2c4f8c"
+      oxblood-glaze: "#8f2a22"
       state-icon-color: "#6f561a"
       state-inactive-color: "#5f6f63"
-      state-active-color: "#255f40"
-      state-light-active-color: "#255f40"
-      state-switch-active-color: "#255f40"
-      state-fan-active-color: "#255f40"
-      state-media_player-active-color: "#255f40"
-      state-climate-heat-color: "#8a6a1e"
-      state-climate-cool-color: "#2e6e73"
-      state-climate-auto-color: "#255f40"
       state-climate-off-color: "#7f8c81"
+      state-climate-dry-color: "#2e6e73"
+      state-climate-fan_only-color: "#2e6e73"
       success-color: "#255f40"
       warning-color: "#8a5a10"
-      error-color: "#9a2c25"
+      error-color: "var(--oxblood-glaze)"
       amber-color: "#8a6a1e"
       orange-color: "#9a5418"
-      red-color: "#9a2c25"
+      red-color: "var(--oxblood-glaze)"
       green-color: "#255f40"
       teal-color: "#2e6e73"
       cyan-color: "#2e6e73"
-      blue-color: "#2f5f8f"
+      blue-color: "var(--cobalt-glaze)"
       indigo-color: "#4a4f9a"
       purple-color: "#7a4a8f"
       deep-purple-color: "#6a4a9a"
